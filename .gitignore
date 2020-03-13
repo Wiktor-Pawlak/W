@@ -1,32 +1,27 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main(int argc, char** argv)
+ {
+ 	fstream plik1;
+	string text[10];
+	int liczby[10];
+	int i=0;
+	
+	plik1.open("c:\\Narkoman.txt", ios::in);
+	
+	if(plik1.good())
+	 while(!plik1.eof())
+	  { plik1>>text[i]; 
+	  
+	plik1>>liczby[i];	
+		   			 texts[i] = texts[i].erase(0, liczby[i]);
+	i++; 
+	}
+	 plik1.close();
+	  plik1.open("c:\\Diler.txt"); 
+	for(int q=0;q<i;q++){
+			plik1<<text[q]<<endl<<endl<<endl<<endl;
+						}
+				   plik1.close();	
+	  	return 0;}
